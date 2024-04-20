@@ -11,7 +11,7 @@ from sklearn.metrics import mean_squared_error
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 
-def create_and_save_base_model_lstm(scaler:MinMaxScaler, X_scaled:np.ndarray, y_scaled:np.ndarray) -> float:
+def create_and_save_base_model_lstm(scaler:MinMaxScaler, X_scaled:np.ndarray, y_scaled:np.ndarray, name:str) -> float:
     """
     Base model that can be created for predicting the S&P 500 close price
 
@@ -34,7 +34,7 @@ def create_and_save_base_model_lstm(scaler:MinMaxScaler, X_scaled:np.ndarray, y_
         :returns: The MSE of the model on the test data
         :rtype: float
     """
-    model_name = "mining_models/base_lstm"
+    model_name = "mining_models/" + name
 
     # Reshape input for LSTM
     X_scaled = X_scaled.reshape((X_scaled.shape[0], 1, X_scaled.shape[1]))
