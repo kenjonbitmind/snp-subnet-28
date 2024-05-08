@@ -23,9 +23,6 @@ if [ ! -f "$INIT_DONE" ]; then
     git add .
     git commit -m "Initial commit from template"
     echo "Repository initialization complete."
-    
-    # start Bittensor health check server
-    nohup python3 /root/healtchecks/bt-hc.py --port 5001 >/tmp/bittensor_health_check.log 2>&1 &
 
     # Mark initialization as done
     touch "$INIT_DONE"
