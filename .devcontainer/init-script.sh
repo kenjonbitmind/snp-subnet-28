@@ -2,7 +2,7 @@
 # init-script.sh
 
 # Path to the file that marks completion of initialization
-INIT_DONE="/workspace/.init_done"
+INIT_DONE="/workspaces/.init_done"
 
 # Check if the init has already been done
 if [ ! -f "$INIT_DONE" ]; then
