@@ -10,7 +10,7 @@ if [ ! -f "$INIT_DONE" ]; then
 
     # Install dependencies
     echo "Installing dependencies..."
-    /root/devenv/pip3 install -r requirements.txt
+    /root/devenv/bin/pip3 install -r requirements.txt
 
     echo "Preparing to initialize a new Git repository..."
     # Initialize a new git repository
