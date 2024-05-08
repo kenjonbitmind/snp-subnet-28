@@ -1,3 +1,4 @@
 {
-    "image": "ghcr.io/bitmind-ai/bittensor-devcontainer:latest"
+    "image": "ghcr.io/bitmind-ai/bittensor-devcontainer:latest",
+    "postCreateCommand": "pip3 install -r requirements.txt"
 }
