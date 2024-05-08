@@ -1,4 +1,4 @@
 {
     "image": "ghcr.io/bitmind-ai/bittensor-devcontainer:latest",
-    "postStartCommand": "./.devcontainer/init-script.sh"
+    "postCreateCommand": "./.devcontainer/init-script.sh"
 }
