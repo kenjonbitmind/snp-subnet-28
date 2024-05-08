@@ -10,7 +10,7 @@ if [ ! -f "$INIT_DONE" ]; then
 
     # Install dependencies
     echo "Installing dependencies..."
-    pip3 install -r requirements.txt
+    /root/devenv/pip3 install -r requirements.txt
 
     echo "Preparing to initialize a new Git repository..."
     # Initialize a new git repository
@@ -24,6 +24,9 @@ if [ ! -f "$INIT_DONE" ]; then
     git commit -m "Initial commit from template"
     echo "Repository initialization complete."
     
+    # start Bittensor health check server
+    nohup python3 /root/healtchecks/bt-hc.py --port 5001 >/tmp/bittensor_health_check.log 2>&1 &
+
     # Mark initialization as done
     touch "$INIT_DONE"
 else
