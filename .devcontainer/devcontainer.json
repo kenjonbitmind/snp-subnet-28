@@ -1,0 +1,4 @@
+{
+    "image": "docker pull ghcr.io/bitmind-ai/bittensor-devcontainer:latest",
+    "remoteUser": "devuser"
+}
