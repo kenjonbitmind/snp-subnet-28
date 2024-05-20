@@ -1,5 +1,0 @@
-{
-    "image": "ghcr.io/bitmind-ai/bittensor-devcontainer:latest",
-    "postCreateCommand": "./.devcontainer/init-script.sh >> /workspaces/init_script.log 2>&1"
-
-}
