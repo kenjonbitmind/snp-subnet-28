@@ -13,4 +13,4 @@ template
 tensorflow
 torch
 transformers
-yfinance
+yfinance==0.2.38
